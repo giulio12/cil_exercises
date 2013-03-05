@@ -1,0 +1,14 @@
+builderNum=2
+class\ net.sourceforge.texlipse.builder.BiberRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/biber
+class\ net.sourceforge.texlipse.builder.BibtexRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/bibtex
+class\ net.sourceforge.texlipse.builder.DvipsRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/dvips
+class\ net.sourceforge.texlipse.builder.KpsewhichRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/kpsewhich
+class\ net.sourceforge.texlipse.builder.LatexRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/latex
+class\ net.sourceforge.texlipse.builder.LualatexRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/lualatex
+class\ net.sourceforge.texlipse.builder.MakeindexNomenclRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/makeindex
+class\ net.sourceforge.texlipse.builder.MakeindexRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/makeindex
+class\ net.sourceforge.texlipse.builder.PdflatexRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/pdflatex
+class\ net.sourceforge.texlipse.builder.PslatexRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/pslatex
+class\ net.sourceforge.texlipse.builder.XelatexRunner_prog=/usr/local/texlive/2012/bin/universal-darwin/xelatex
+eclipse.preferences.version=1
+outputFormat=pdf

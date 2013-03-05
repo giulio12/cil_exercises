@@ -1,0 +1,16 @@
+function [ mu, lambda, U ] = PCAanalysis( X )
+
+x_mean = mean(X);
+X_centered = X - repmat(x_mean, 1, size(X,2));
+X_cov = cov(X_centered);
+
+[lambda, U] = eig(X_cov'); % why the trasposed matrix O.o ?
+
+lambda = diag(lambda);
+[sorted_lambda, index] = sort(lambda,'ascend');
+U= U(:,index);
+
+lambda = sorted_lambda;
+mu = X_centred;
+
+end

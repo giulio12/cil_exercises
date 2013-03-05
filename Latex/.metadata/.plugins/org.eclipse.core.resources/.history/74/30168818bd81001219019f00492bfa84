@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage[a4paper,total={170mm,257mm}]{geometry}
+\geometry{hscale=0.67}
+{  \geometry{asymmetric}
+  \geometry{bindingoffset=0pt,hmarginratio=1:1}
+}
+
+\author{Giulio Valente}
+
+\title{Exercise 2 - Principal Component Analysis}
+
+\begin{document}
+
+\date{}
+\maketitle
+
+\section{Problem 1}
+\subsection{1}
+\subsubsection{a}
+$$\bar{\textbf X} = \textbf X - \textbf M$$
+
+\subsubsection{b}
+$$\boldsymbol\Sigma = \frac{1}{N}\sum_{n=1}^N(\textbf x_n - \bar{\textbf x})(\textbf x_n - \bar{\textbf x})^T$$
+or
+$$\boldsymbol\Sigma = \frac{1}{N}(\textbf X - \bar{\textbf X})(\textbf X - \bar{\textbf X})^T$$
+
+\subsubsection{c}
+$$\boldsymbol\Sigma = \textbf U\boldsymbol\Lambda\textbf U^T$$
+
+\subsubsection{d}
+$$\bar{\textbf Z} =  \textbf U^T\bar{\textbf X}$$
+
+\subsubsection{e}
+$$\tilde{\textbf X} = \textbf U\textbf Z$$
+\subsection{2}
+\subsubsection{a}
+It depends from the point of view. It appears to be low, because the range of the eigenvalues is short.
+\subsubsection{b}
+Yes, since the range is short also the approximation error will be low.
+\subsubsection{c}
+The median of the dimensions should be fine. The $50$ dimension, where $\lambda_50 = 1$. 
+
+\subsection{3}
+\begin{enumerate}
+  \item B
+  \item E
+  \item C
+\end{enumerate}
+
+\subsection{4}
+\subsubsection{a}
+
+
+
+
+
+\end{document}
+
