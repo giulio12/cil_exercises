@@ -13,8 +13,6 @@ end
 % new padded array with last column and last array
 P = padarray(I,[pad_x pad_y],'replicate','post');
 
-size(P)
-
 % d*d = d^2 is the length of each column
 % size(P,1)/d)*(size(P,2)/d) is just the total number of squares we have
 X = zeros(d*d,(size(P,1)/d)*(size(P,2)/d));
