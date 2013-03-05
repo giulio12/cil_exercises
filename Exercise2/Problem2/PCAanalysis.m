@@ -7,7 +7,7 @@ X_cov = cov(X_centered');
 [U, lambda] = eig(X_cov);
 lambda = diag(lambda);
 
-[sorted_lambda, index] = sort(lambda,1,'descend'); % not clear why we have to do this
+[sorted_lambda, index] = sort(lambda,1,'descend');
 U = U(:,index); % just follows from the previous step
 lambda = sorted_lambda;
 
