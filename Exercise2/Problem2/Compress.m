@@ -2,20 +2,20 @@ function I_comp = Compress(I)
 
 d = 8;
 X = Extract(I,d);
-[x_centered,lambda,U] = PCAanalysis(X);
+[X_centered,lambda,U] = PCAanalysis(X);
 
 % just for testing purposes
+% use the first 20 dimension of the eigenmatrix
 U_k = U(:,1:20);
 
-size(U_k')
-size(x_centered)
+% obtain the Z matrix
+Z_k = U_k'*X_centered;
 
-Z_k = U_k'*x_centered';
-
-
-I_comp.color_dim = size(I,3); % 1 bw / 3 rgb
 I_comp.d = d;
+I_comp.width = size(I,1);
+I_comp.height = size(I,2);
 I_comp.Z_k = Z_k;
-%I_comp.U_k = U_k;
+I_comp.U_k = U_k;
+I_comp.X_centered =X_centered;
 
 end

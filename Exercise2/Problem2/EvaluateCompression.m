@@ -34,7 +34,7 @@ for i = 3:length(dir) % runing through the folder
     Comp_rates(k) = size_comp.bytes / size_orig.bytes; 
     
     k = k+1;
-    
+    break;
 end
 
 Result(1) = mean(Errors);
