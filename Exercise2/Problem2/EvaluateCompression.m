@@ -35,6 +35,7 @@ for i = 3:length(dir) % runing through the folder
     
     k = k+1;
     figure(k);
+    break;
 end
 
 Result(1) = mean(Errors);
