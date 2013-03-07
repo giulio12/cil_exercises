@@ -9,7 +9,9 @@ I_rec = zeros(I_comp.width, I_comp.height, I_comp.colors);
 for c=1:I_comp.colors
     
     X_rebuilt = I_comp.U_k{c}*I_comp.Z_k{c};
-    X_rebuilt = X_rebuilt + repmat(I_comp.X_centered{c},1,size(I_comp.Z_k{c},2));
+    X_rebuilt = X_rebuilt + repmat(I_comp.X_centered(:,c),1,size(I_comp.Z_k{c},2));
+    
+    size(I_comp.X_centered(:,c))
        
     x_patch = 0;
     y_patch = 0;
@@ -31,6 +33,6 @@ end
 
 
 I_rec = I_rec(1:I_comp.width, 1:I_comp.height,:);
-%imshow(I_rec);
+imshow(I_rec);
 
 end

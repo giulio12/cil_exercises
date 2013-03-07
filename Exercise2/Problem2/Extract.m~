@@ -22,6 +22,9 @@ for m = 0:(size(P,1)/d)-1
     for k = 0:(size(P,2)/d)-1
         % select the single squares
         T = P(1+(m*d) : d+(m*d) , 1+(k*d) : d+(k*d));
+        X(:,m*(size(P,2)/d)+k+1) = reshape(T',[],1);
+        
+        T = P(1+(m*d):(m*d)+d,1+(k*d):(k*d)+d);
         X(:,m*(size(P,2)/d)+k+1) = reshape(T',d*d,1);
     end
 end
