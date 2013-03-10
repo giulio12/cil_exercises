@@ -1,0 +1,19 @@
+function X_pred = PredictMissingValues(X, nil)
+% Predict missing entries in matrix X based on known entries. Missing
+% values in X are denoted by the special constant value nil.
+
+X_pred = X;
+
+X_pred(X_pred == nil) = NaN;
+X_mean = nanmean(X_pred);
+
+[r,c] = find(isnan(X_pred));
+
+for i=1:size(X_pred,1)
+    for j=1:size(X_pred,2)
+        if(A(i,j) == NaN)
+        end
+    end
+end
+
+X_pred(r(1:end),c(1:end)) = 

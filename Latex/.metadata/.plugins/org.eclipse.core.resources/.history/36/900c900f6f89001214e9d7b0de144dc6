@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage[a4paper,total={170mm,257mm}]{geometry}
+\geometry{hscale=0.67}
+{  \geometry{asymmetric}
+  \geometry{bindingoffset=0pt,hmarginratio=1:1}
+}
+
+\author{Giulio Valente}
+
+\title{Exercise 3 - Singular Value Decomposition}
+
+\begin{document}
+
+\date{}
+\maketitle
+
+\section{Problem 1}
+\subsection{1}
+$AA^T\in\mathbb N^{6x6}$
+
+
+\end{document}
+

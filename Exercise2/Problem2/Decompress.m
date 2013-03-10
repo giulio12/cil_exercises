@@ -31,6 +31,6 @@ end
 
 
 I_rec = I_rec(1:I_comp.width, 1:I_comp.height,:);
-%imshow(I_rec);
+imshow(I_rec);
 
 end
