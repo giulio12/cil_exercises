@@ -68,7 +68,7 @@ $$\|A - A_3\|_2^F = 2.8415$$
 \subsubsection{a.}
 $$A = UDV^T$$
 $$V^T = D^{-1}U^TA$$
-$$V^T[-0.46 0.35]^T$$
+$$[-0.46 0.35]^T$$
 \subsubsection{b.}
 The genres that Bob may like are action movies and sci-fi movies.
 \subsection{14}
