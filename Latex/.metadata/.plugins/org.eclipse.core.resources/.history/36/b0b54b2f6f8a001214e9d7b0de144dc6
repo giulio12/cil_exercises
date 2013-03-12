@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage[a4paper,total={170mm,257mm}]{geometry}
+\geometry{hscale=0.67}
+{  \geometry{asymmetric}
+  \geometry{bindingoffset=0pt,hmarginratio=1:1}
+}
+
+\author{Giulio Valente}
+
+\title{Exercise 3 - Singular Value Decomposition}
+
+\begin{document}
+
+\date{}
+\maketitle
+
+\section{Problem 1}
+\subsection{1}
+The size is $AA^T\in\mathbb N^{6x6}$ and this matrix suggest us the similarities between movies,
+in fact we are multiplying by rows.
+
+\subsection{2}
+The size is $A^TA\in\mathbb N^{5x5}$ and this matrix suggest us the similarities between users and their preferences.
+In fact we are multiplying by columns.
+
+\subsection{3}
+$$A = UDV^T$$
+$$A\in\mathbb N^{5x6}, U\in\mathbb N^{6x6}, D\in\mathbb N^{6x5}, V^T\in\mathbb N^{5x6}$$
+
+\subsection{4}
+By adding some noise as values ($5.5$) we want to find the underlying structure in order to predict the mssing
+values. In addition we find the correlation between users and concepts (i.e.: genre of the movie), and between
+movies and concepts.
+
+\subsection{5}
+Columns $1-3$ are the more reasonable to keep, since their values is higher also the affecting factor is higher.
+
+\subsection{6}
+Matrix $U$ maps movies-to-concepts.
+
+\subsection{7}
+Matrix $V$ maps users-to-concepts.
+
+\subsection{8+9}
+Solution on the sheet.
+
+\subsection{10}
+$29.7$ is the strength of comedies.\\
+$10.00$ is the strength of action movies.\\
+$7.09$ is the strength of sci-fi movies.
+
+\subsection{11}
+$$A_3 = U_3D_3V^T_3$$
+$$U[:,1:3]D[1:3, 1:3]V[:,1:3]^T$$
+
+\subsection{12}
+Error under euclidian norm: 
+$$\|A - A_3\|_2 = 2.7599$$
+Error under Frobenius norm:
+$$\|A - A_3\|_2^F = 2.8415$$
+
+\subsection{13}
+\subsubsection{a.}
+$$A = UDV^T$$
+$$V^T = D^{-1}U^TA$$
+$$[-0.46 0.35]^T$$
+\subsubsection{b.}
+The genres that Bob may like are action movies and sci-fi movies.
+\subsection{14}
+Bob's rating does not affect our prediction system.
+
+
+\end{document}
+
