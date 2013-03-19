@@ -22,4 +22,7 @@
 			<item value="texlipse.category1"/>
 		</list>
 	</section>
+	<section name="EditorSelectionDialog">
+		<item value="true" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
+	</section>
 </section>
