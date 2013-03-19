@@ -14,7 +14,7 @@ for i=1:size(X_pred,2)
 end
 
 % 2. SVD decomposition
-[U,D,V] = svd(X_pred);
+[U,D,V] = svd(X_pred,0);
 
 
 % 3. Prediction -- why do we have to do this???
@@ -29,26 +29,33 @@ end
 
 
 % 4. Model Selection
-D_diag = sort(diag(D),'descend');
-k=0;
-%plot(D_diag)
-prev_delta = intmax;
-min_delta = intmax;
-for i=1:size(D_diag,1)-1
-    delta = D_diag(i) - D_diag(1+1);
-    if(min_delta > delta && abs(prev_delta-delta) > 20)
-        k = i;
-        min_delta = delta;
-    end
-    prev_delta = delta;
-end
+% D_diag = sort(diag(D),'descend');
+% k=0;
+% %plot(D_diag)
+% prev_delta = intmax;
+% min_delta = intmax;
+% for i=1:size(D_diag,1)-1
+%     delta = D_diag(i) - D_diag(1+1);
+%     if(min_delta > delta && abs(prev_delta-delta) > 20)
+%         k = i;
+%         min_delta = delta;
+%     end
+%     prev_delta = delta;
+% end
 
 % 5. Recommender System
-U = U(:,1:k);
-D = D(1:k,1:k);
-V = V(:,1:k);
+best_k = 6;
+% best_mse = intmax;
+% diag(D)
+% for k=1:size(diag(D))
+%     X_pred = U(:,1:k)*D(1:k,1:k)*V(:,1:k)';
+%     mse = sqrt(mean((X_tst(X_tst ~= nil) - X_pred(X_tst ~= nil)).^2));  % error on known test values
+%     if (mse < best_mse)
+%         best_mse = mse;
+%         best_k = k;
+%     end
+% end
 
-X_pred = U*D*V';
-
+X_pred = U(:,1:best_k)*D(1:best_k,1:best_k)*V(:,1:best_k)';
 
 end
